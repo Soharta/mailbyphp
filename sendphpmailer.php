@@ -17,12 +17,12 @@ function mailer($name, $email, $sub, $text) {
 	$mail->addAddress('soharta@list.ru');
 	$mail->Subject = 'Письмо от: '.$name;
 	// $mail->Body = 'Письмо';
-	$mail->Body = 'Письмо от: '.$name.'<br>'.'Обратный адрес: '.$email.'<br>'.$text;
+	$mail->Body = "<div>Письмо от: $name<br>Обратный адрес: $email<br>$text</div>";
 	//send the message, check for errors
 	if (!$mail->send()) {
 	    echo "ERROR: " . $mail->ErrorInfo;
 	} else {
-	    echo "SUCCESS3";
+	    echo "SUCCESS";
 	}
 
 }
