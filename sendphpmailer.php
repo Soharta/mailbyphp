@@ -17,7 +17,7 @@ function mailer($name, $email, $sub, $text) {
 	$mail->addAddress('soharta@list.ru');
 	$mail->Subject = 'Письмо от: '.$name;
 	// $mail->Body = 'Письмо';
-	$mail->Body = "<div>Письмо от: $name<br>Обратный адрес: $email<br>$text</div>";
+	$mail->Body = 'Письмо от: '.$name.' Обратный адрес: '.$email.'Текст: '.$text;
 	//send the message, check for errors
 	if (!$mail->send()) {
 	    echo "ERROR: " . $mail->ErrorInfo;
