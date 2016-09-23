@@ -10,6 +10,7 @@ function mailer($name, $email, $sub, $text) {
 	$mail->SMTPAuth = true;
 	$mail->Host = 'smtp.gmail.com';
 	$mail->Port = 465;
+	$mail->CharSet = "UTF-8";
 	$mail->Username = 'yegor.tikhanin@gmail.com';
 	$mail->Password = 'hamhamham';
 	$mail->setFrom('alohawind@mail.ru');
@@ -21,7 +22,7 @@ function mailer($name, $email, $sub, $text) {
 	if (!$mail->send()) {
 	    echo "ERROR: " . $mail->ErrorInfo;
 	} else {
-	    echo "SUCCESS2";
+	    echo "SUCCESS3";
 	}
 
 }
